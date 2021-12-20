@@ -97,6 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   loginController.isLeading
                       ? CupertinoActivityIndicator()
                       : MaterialButton(
+<<<<<<< HEAD
                           // onPressed: () async{
                           //   setState(() {
                           //     loginController.isLeading=true;
@@ -111,6 +112,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           //     loginController.isLeading=false;
                           //   });
                           // },
+=======
+>>>>>>> 1592828 (first)
                           onPressed: () async {
                             setState(() => loginController.isLeading = true);
                             final message = await loginController.signUp();

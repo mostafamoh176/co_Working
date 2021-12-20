@@ -19,12 +19,12 @@ class LoginController {
       "returnSecureToken": true
     };
     try {
-      final responce = await DioHelper.post("signUp", Date: body);
+      final responce = await DioHelper.get("signUp");
       if (responce.statusCode == 200) {
-        await Shared.setData(
-            email: email,
-            ApiToken: responce.data["idToken"],
-            uid: responce.data["localId"]);
+        await Shared.setDataInLog(
+          email: email,
+          ApiToken: responce.data["idToken"],
+        );
         print("Data inserted Successfully");
         return "ok";
       } else {
