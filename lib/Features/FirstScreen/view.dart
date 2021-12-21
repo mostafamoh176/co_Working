@@ -15,7 +15,7 @@ class FirstLayer extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 350.0,
+            height: 250.0,
             color: Colors.blue,
             child: Stack(
               children: <Widget>[
@@ -71,7 +71,7 @@ class FirstLayer extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: 180,
+                  top: 150,
                   left: 0,
                   right: 0,
                   child: Container(
@@ -84,128 +84,8 @@ class FirstLayer extends StatelessWidget {
                         SizedBox(
                           height: 50,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                          child: Text(
-                            "Space Availability in City",
-                            style: Theme.of(context).textTheme.headline6,
-                          ),
-                        ),
                         SizedBox(
                           height: 10,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Container(
-                              height: 40,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color: Colors.grey,
-                                        blurRadius: 0.7,
-                                        offset: Offset(0.7, 0.7),
-                                        spreadRadius: 0.5)
-                                  ],
-                                  borderRadius: BorderRadius.circular(5),
-                                  color: Colors.white),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Text(
-                                    "12",
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 16),
-                                  ),
-                                  Container(
-                                    padding: EdgeInsets.symmetric(
-                                      vertical: 3,
-                                    ),
-                                    width: 1,
-                                    color: Colors.grey,
-                                    height: double.maxFinite,
-                                  ),
-                                  Text("Cafe",
-                                      style: TextStyle(
-                                          color: Colors.black, fontSize: 16)),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              height: 40,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color: Colors.grey,
-                                        blurRadius: 0.7,
-                                        offset: Offset(0.7, 0.7),
-                                        spreadRadius: 0.5)
-                                  ],
-                                  borderRadius: BorderRadius.circular(5),
-                                  color: Colors.white),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Text(
-                                    "12",
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 16),
-                                  ),
-                                  Container(
-                                    padding: EdgeInsets.symmetric(
-                                      vertical: 1,
-                                    ),
-                                    width: 1,
-                                    color: Colors.grey,
-                                    height: double.maxFinite,
-                                  ),
-                                  Text("Cafe",
-                                      style: TextStyle(
-                                          color: Colors.black, fontSize: 16)),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              height: 40,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color: Colors.grey,
-                                        blurRadius: 0.7,
-                                        offset: Offset(0.7, 0.7),
-                                        spreadRadius: 0.5)
-                                  ],
-                                  borderRadius: BorderRadius.circular(5),
-                                  color: Colors.white),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Text(
-                                    "12",
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 16),
-                                  ),
-                                  Container(
-                                    padding: EdgeInsets.symmetric(
-                                      vertical: 1,
-                                    ),
-                                    width: 1,
-                                    color: Colors.grey,
-                                    height: double.maxFinite,
-                                  ),
-                                  Text("Cafe",
-                                      style: TextStyle(
-                                          color: Colors.black, fontSize: 16)),
-                                ],
-                              ),
-                            ),
-                          ],
                         ),
                         SizedBox(
                           height: 5,
@@ -254,7 +134,7 @@ class FirstLayer extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10.0),
                           border: Border.all(
                               color: Colors.grey.withOpacity(0.5), width: 1.0),
-                          color: Colors.white),
+                          color: Colors.grey[200]),
                       child: Row(
                         children: [
                           IconButton(
@@ -308,7 +188,11 @@ class FirstLayer extends StatelessWidget {
                     child: Stack(
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.circular(25),
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(25),
+                            bottomRight: Radius.circular(25),
+
+                          ),
                           child: Image(
                             image: AssetImage("assets/images/co1.jpg"),
                             height: 150,

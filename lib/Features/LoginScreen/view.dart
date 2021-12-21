@@ -97,7 +97,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   loginController.isLeading
                       ? CupertinoActivityIndicator()
                       : MaterialButton(
-<<<<<<< HEAD
                           // onPressed: () async{
                           //   setState(() {
                           //     loginController.isLeading=true;
@@ -112,8 +111,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           //     loginController.isLeading=false;
                           //   });
                           // },
-=======
->>>>>>> 1592828 (first)
                           onPressed: () async {
                             setState(() => loginController.isLeading = true);
                             final message = await loginController.signUp();
@@ -124,8 +121,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                       builder: (context) => FirstLayer()));
                               print(
                                   "this process is coplar${loginController.isLeading}");
-                            }else if(message !=null && message.isNotEmpty){
-                              showSnackBar(message,context, isError: true);
+                            } else if (message != null && message.isNotEmpty) {
+                              showSnackBar(message, context, isError: true);
                             }
                             setState(() => loginController.isLeading = false);
                           },
@@ -173,8 +170,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           onPressed: () {
                             Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                         RegisterScreen()));
+                                    builder: (context) => RegisterScreen()));
                           },
                           child: Text(
                             "Register?",

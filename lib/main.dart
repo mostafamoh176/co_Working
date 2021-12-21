@@ -47,11 +47,7 @@ class MyApp extends StatelessWidget {
             subtitle2: TextStyle(color: Colors.white, fontSize: 18)),
       ),
       debugShowCheckedModeBanner: false,
-<<<<<<< HEAD
-      home:RegisterScreen(),
-=======
-      home:LoginScreen(),
->>>>>>> 1592828 (first)
+      home: LoginScreen(),
     );
   }
 }

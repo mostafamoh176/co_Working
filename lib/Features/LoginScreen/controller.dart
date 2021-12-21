@@ -19,7 +19,7 @@ class LoginController {
       "returnSecureToken": true
     };
     try {
-      final responce = await DioHelper.get("signUp");
+      final responce = await DioHelper.post("signInWithPassword",Date:body );
       if (responce.statusCode == 200) {
         await Shared.setDataInLog(
           email: email,
