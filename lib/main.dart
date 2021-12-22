@@ -4,6 +4,8 @@ import 'package:mat3m/Features/FirstScreen/view.dart';
 import 'package:mat3m/Features/RegisterScreen/view.dart';
 import 'package:mat3m/core/Storage/shared_pref.dart';
 import 'Features/LoginScreen/view.dart';
+import 'Features/OTPScreen/otpScreen.dart';
+import 'Features/OTPScreen/view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -47,7 +49,7 @@ class MyApp extends StatelessWidget {
             subtitle2: TextStyle(color: Colors.white, fontSize: 18)),
       ),
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: PinCodeVerificationScreenState(),
     );
   }
 }
